@@ -11,7 +11,7 @@
     "build": "tsc"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jorge Domínguez",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.4.5",
