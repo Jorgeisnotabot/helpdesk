@@ -1,7 +1,7 @@
 import { Schema, model } from 'mongoose';
 
 //interface
-interface Ticket {
+interface ITicket {
     _id: string;
     companyId: string;
     clientId?: string;
@@ -16,11 +16,7 @@ interface Ticket {
 }
 
 //schema
-const ticketSchema = new Schema<Ticket>({
-    _id: {
-        type: String,
-        required: true
-    },
+const ticketSchema = new Schema<ITicket>({
     companyId: {
         type: String,
         required: true
@@ -70,6 +66,6 @@ const ticketSchema = new Schema<Ticket>({
 });
 
 //model
-const Ticket = model<Ticket>('Ticket', ticketSchema);
+const Ticket = model<ITicket>('Ticket', ticketSchema);
 
 export default Ticket;
